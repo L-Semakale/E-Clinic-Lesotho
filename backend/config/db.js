@@ -1,12 +1,15 @@
-const mongoose = require("mongoose");
+const { Pool } = require("pg");
 
-const MONGO_URI = "mongodb+srv://e-clinic:cWUR7RPKuJ0bwVcg@e-clinic.w5bpv.mongodb.net/?retryWrites=true&w=majority&appName=e-clinic";
+const pool = new Pool({
+  user: "e-clinic",
+  host: "postgres",
+  database: "postgis_35_sample",
+  password: "elizabeth",
+  port: 5432, // Default PostgreSQL port
+});
 
-mongoose.connect(MONGO_URI, {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-})
-.then(() => console.log("MongoDB Connected!"))
-.catch(err => console.error("MongoDB Connection Error:", err));
+pool.connect()
+  .then(() => console.log("PostgreSQL Connected!"))
+  .catch(err => console.error("PostgreSQL Connection Error:", err));
 
-module.exports = mongoose;
+module.exports = pool;

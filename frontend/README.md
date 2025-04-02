@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+# E-Clinic App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+E-Clinic is a web application designed for online clinic management. It allows patients to book appointments, doctors to manage schedules, and admins to oversee operations. The backend is built using Express.js with PostgreSQL, and JWT is used for authentication.
 
-## Available Scripts
+## Prerequisites
+Ensure you have the following installed before proceeding:
 
-In the project directory, you can run:
+- [Node.js](https://nodejs.org/) (Latest LTS version recommended)
+- [PostgreSQL](https://www.postgresql.org/) (Ensure PostgreSQL is running locally)
+- [Git](https://git-scm.com/)
 
-### `npm start`
+## Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### 1. Clone the Repository
+```sh
+git clone https://github.com/L-Semakale/e-clinic.git
+cd e-clinic
+```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### 2. Install Dependencies
+Run the following command inside the project directory:
+```sh
+npm install
+```
 
-### `npm test`
+### 3. Configure Environment Variables
+Create a `.env` file in the root directory and add the following:
+```sh
+PORT=5000
+DATABASE_URL=postgres://yourusername:yourpassword@localhost:5432/eclinic_db
+JWT_SECRET=your_secret_key
+```
+Modify the values as needed based on your setup.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 4. Set Up the Database
+Ensure PostgreSQL is running, then execute:
+```sh
+npx sequelize-cli db:create
+npx sequelize-cli db:migrate
+npx sequelize-cli db:seed:all # (Optional) Seed initial data
+```
 
-### `npm run build`
+### 5. Start the Server
+Run the backend server with:
+```sh
+npm start
+```
+The server should now be running at `http://localhost:5000/`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 6. Run the Frontend (If applicable)
+If you have a frontend, navigate to its directory and run:
+```sh
+npm install
+npm start
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## API Documentation
+You can explore the API using Postman or any API testing tool. If Swagger is configured, visit:
+```
+http://localhost:5000/api-docs
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Troubleshooting
+- **Database connection issues:** Ensure PostgreSQL is running and credentials in `.env` are correct.
+- **Port conflicts:** If port 5000 is in use, change it in `.env` and restart the server.

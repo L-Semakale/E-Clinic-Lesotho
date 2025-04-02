@@ -3,25 +3,25 @@ import { useParams } from "react-router-dom"; // Import useParams to fetch dynam
 
 const PatientsProfile = () => {
   const { username } = useParams(); // Get the username from URL params
-  const [patientData, setPatientData] = useState({});
+  const [patientData, setPatientData] = useState(null);
 
   // Static patient data
   const patientProfiles = {
-    "Lerato Molefe": {
+    "lerato molefe": {
       name: "Lerato Molefe",
       dob: "1990-03-12",
       gender: "Female",
       contact: "+27 123 456 789",
       medical_history: "No significant medical history.",
     },
-    "Mosa Semakale": {
+    "mosa semakale": {
       name: "Mosa Semakale",
       dob: "1985-07-25",
       gender: "Male",
       contact: "+27 987 654 321",
       medical_history: "Hypertension, currently on medication.",
     },
-    "Rapelang Thebola": {
+    "rapelang thebola": {
       name: "Rapelang Thebola",
       dob: "1995-11-10",
       gender: "Female",
@@ -30,10 +30,11 @@ const PatientsProfile = () => {
     },
   };
 
-  // Set patient data based on the username passed in the URL
+  // Normalize username and set patient data
   useEffect(() => {
-    if (patientProfiles[username]) {
-      setPatientData(patientProfiles[username]);
+    const normalizedUsername = username?.toLowerCase().trim();
+    if (patientProfiles[normalizedUsername]) {
+      setPatientData(patientProfiles[normalizedUsername]);
     } else {
       setPatientData(null); // Handle case where no patient data is found
     }

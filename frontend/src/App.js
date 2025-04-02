@@ -1,17 +1,16 @@
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import LaunchScreen from "./components/pages/LaunchScreen";  
-import Signup from "./components/pages/Signup";  
-import Login from "./components/pages/Login";  
-import PatientDashboard from "./components/pages/PatientDashboard";  
-import DoctorDashboard from "./components/pages/DoctorDashboard";  
-import AdminDashboard from "./components/pages/AdminDashboard";  
-import ProtectedRoute from "./components/ProtectedRoute";  
-import BookAppointment from "./components/pages/BookAppointment";  
-import ManageUsers from "./components/pages/ManageUsers";  
-import PatientsProfile from "./components/pages/PatientsProfile"; 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
+import LaunchScreen from "./components/pages/LaunchScreen";
+import Signup from "./components/pages/Signup";
+import Login from "./components/pages/Login";
+import PatientDashboard from "./components/pages/PatientDashboard";
+import DoctorDashboard from "./components/pages/DoctorDashboard";
+import AdminDashboard from "./components/pages/AdminDashboard";
+import ProtectedRoute from "./components/ProtectedRoute";
+import BookAppointment from "./components/pages/BookAppointment";
+import ManageUsers from "./components/pages/ManageUsers";
+import PatientsProfile from "./components/pages/PatientsProfile";
 
-// Dashboard Component and routing
 const App = () => {
   return (
     <Router>
