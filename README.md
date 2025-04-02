@@ -17,7 +17,7 @@ Ensure you have the following installed before proceeding:
 
 ### 1️⃣ Clone the Repository  
 ```sh
-git clone https://github.com/your-username/E-Clinic-Lesotho.git
+git clone https://github.com/L-Semakale/E-Clinic-Lesotho.git
 cd E-Clinic-Lesotho
 ```
 
@@ -31,8 +31,8 @@ npm install
 Create a `.env` file inside the `backend` folder and configure the following:  
 ```env
 PORT=5000
-DATABASE_URL=postgres://your_db_user:your_db_password@localhost:5432/your_db_name
-JWT_SECRET=your_jwt_secret
+DATABASE_URL=postgres://postgres:elizabeth@localhost:5432/postgis_35_sample
+JWT_SECRET=ffb2a34292e7ad33fa857b11d415ca84e566cb6f110fe5677c3c7dd90e67fd35
 ```
 
 ### 4️⃣ Run Database Migrations  
