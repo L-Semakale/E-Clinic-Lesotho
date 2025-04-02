@@ -2,7 +2,7 @@
 
 A web-based platform for managing e-clinic services in Lesotho. This guide will help you set up the project on your local machine.
 
-## 📌 Prerequisites
+##  Prerequisites
 
 Ensure you have the following installed before proceeding:
 
@@ -13,7 +13,7 @@ Ensure you have the following installed before proceeding:
 
 ---
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### 1️⃣ Clone the Repository  
 ```sh
@@ -65,7 +65,7 @@ npm install
 npm start
 ```
 
-The application should now be running on **http://localhost:3000** 🚀  
+The application should now be running on **http://localhost:3000** 
 
 ---
 
