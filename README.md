@@ -69,7 +69,7 @@ The application should now be running on **http://localhost:3000**
 
 ---
 
-## 🛠 Troubleshooting  
+##  Troubleshooting  
 
 - If `react-scripts` is missing, install it manually:  
   ```sh
@@ -84,7 +84,7 @@ The application should now be running on **http://localhost:3000**
 
 ---
 
-## 🎯 Technologies Used  
+##  Technologies Used  
 
 - **Frontend:** React, Bootstrap  
 - **Backend:** Node.js, Express.js  
