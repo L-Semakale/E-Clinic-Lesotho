@@ -1,7 +1,3 @@
-A well-written **README** should clearly guide anyone on how to set up and run your project. Here’s a structured **README.md** template that ensures clarity:  
-
----
-
 # E-Clinic Lesotho
 
 A web-based platform for managing e-clinic services in Lesotho. This guide will help you set up the project on your local machine.
