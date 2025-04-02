@@ -1,2 +1,1 @@
-Mission
 The system’s mission is to improve access to basic healthcare in underserved rural areas of Lesotho through a digital healthcare solution that connects patients with medical professionals via telemedicine. This system will streamline access to medical consultations, minimize the need for travel, and bridge the gap in healthcare accessibility in these areas.
